@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <link href="static/style2.css" rel="stylesheet">
+    </head>
+    <body>
+        <center>
+            <div class='cont'>
+                
+            
+            {% if data[1] > 0.6 %}
+            <h1>IT'S A DOG!!</h1>
+            
+            {%elif 0.4 >= data[1] %}
+            <h1>IT'S A CAT!! </h1>
+
+            
+            {%elif  0.4 < data[1] <= 0.6 %}
+            <h1> INVALID IMAGE !! </h1>
+            
+            {%endif%}
+
+        </div> 
+            <img src="{{url_for('load_img')}}" alt='img'><br>
+            
+            <br><a href="/" class='btn'>go back</a>
+
+        </center>
+        
+    </body>
+</html>
